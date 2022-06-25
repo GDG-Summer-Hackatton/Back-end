@@ -1,7 +1,8 @@
 package com.example.gdg2022backend.domain.analysis.service;
 
+import com.example.gdg2022backend.domain.analysis.service.dto.MatchingChickenResult;
 import com.example.gdg2022backend.domain.analysis.service.dto.SurveyResult;
-import com.example.gdg2022backend.domain.chicken.repository.ChickenNativeQuery;
+import com.example.gdg2022backend.domain.chicken.repository.ChickenJpaRepository;
 import com.example.gdg2022backend.domain.chicken.repository.ChickenRepository;
 
 import java.util.List;
@@ -17,15 +18,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class MatchingChickenService {
 
     private final ChickenRepository chickenRepository;
-    private final ChickenNativeQuery chickenNativeQuery;
+    private final ChickenJpaRepository chickenJpaRepository;
 
     // TODO surveyResult로 매칭되는 치킨 생성
     //   매칭 순서대로 탑 10
-    public List<Object> matchChicken(final SurveyResult surveyResult) {
-        final long limitCount = 10L;
-//		chickenNativeQuery
-        return chickenRepository.findAll().stream()
-                .limit(limitCount)
-                .collect(Collectors.toList());
+    public List<MatchingChickenResult> matchChicken(final SurveyResult surveyResult) {
+        return chickenJpaRepository.matchingChicken(surveyResult);
     }
 }
