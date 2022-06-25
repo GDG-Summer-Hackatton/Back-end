@@ -18,6 +18,9 @@ public class Chicken {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	private String brand;
+	private String name;
+
 	private Double a1; // 단조로운
 	private Double a2; // 풍부한
 	private Double a3; // 편리한
@@ -31,4 +34,6 @@ public class Chicken {
 	private Double c4; // 신
 	private Double d1; // 서비스
 	private Double d2; // 품질
+
+	private String description;
 }
