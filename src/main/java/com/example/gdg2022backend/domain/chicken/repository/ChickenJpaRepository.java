@@ -31,7 +31,7 @@ public class ChickenJpaRepository {
 				"from chicken) as data1 " +
 				"where sum < ?2 " +
 				"order by sum desc " +
-				"limit 5)";
+				"limit 5) order by score desc";
 
 		Query nativeQuery = em.createNativeQuery(sql)
 				.setParameter(1, surveyResult.sum())
