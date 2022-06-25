@@ -16,6 +16,6 @@ public class MemberLoginResponse {
 	public MemberLoginResponse(final Member member) {
 		this.id = member.getId();
 		this.email = member.getEmail();
-		this.surveyId = member.getSurvey().getId();
+		this.surveyId = member.getSurvey() == null ? null : member.getSurvey().getId();
 	}
 }
