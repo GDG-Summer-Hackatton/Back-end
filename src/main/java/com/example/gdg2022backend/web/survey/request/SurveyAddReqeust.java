@@ -1,16 +1,16 @@
 package com.example.gdg2022backend.web.survey.request;
 
-import com.example.gdg2022backend.web.survey.type.Q1;
-import com.example.gdg2022backend.web.survey.type.Q10;
-import com.example.gdg2022backend.web.survey.type.Q11;
-import com.example.gdg2022backend.web.survey.type.Q2;
-import com.example.gdg2022backend.web.survey.type.Q3;
-import com.example.gdg2022backend.web.survey.type.Q4;
-import com.example.gdg2022backend.web.survey.type.Q5;
-import com.example.gdg2022backend.web.survey.type.Q6;
-import com.example.gdg2022backend.web.survey.type.Q7;
-import com.example.gdg2022backend.web.survey.type.Q8;
-import com.example.gdg2022backend.web.survey.type.Q9;
+import com.example.gdg2022backend.domain.analysis.service.type.Q1;
+import com.example.gdg2022backend.domain.analysis.service.type.Q10;
+import com.example.gdg2022backend.domain.analysis.service.type.Q11;
+import com.example.gdg2022backend.domain.analysis.service.type.Q2;
+import com.example.gdg2022backend.domain.analysis.service.type.Q3;
+import com.example.gdg2022backend.domain.analysis.service.type.Q4;
+import com.example.gdg2022backend.domain.analysis.service.type.Q5;
+import com.example.gdg2022backend.domain.analysis.service.type.Q6;
+import com.example.gdg2022backend.domain.analysis.service.type.Q7;
+import com.example.gdg2022backend.domain.analysis.service.type.Q8;
+import com.example.gdg2022backend.domain.analysis.service.type.Q9;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;

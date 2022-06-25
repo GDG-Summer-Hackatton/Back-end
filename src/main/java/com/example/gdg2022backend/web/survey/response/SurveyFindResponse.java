@@ -1,9 +1,6 @@
 package com.example.gdg2022backend.web.survey.response;
 
 import com.example.gdg2022backend.domain.survey.entity.Survey;
-import com.example.gdg2022backend.web.survey.request.SurveyAddReqeust;
-import com.example.gdg2022backend.web.survey.type.Q1;
-import com.example.gdg2022backend.web.survey.type.Q2;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -23,7 +23,6 @@ public class MatchingChickenService {
     //   매칭 순서대로 탑 10
     public List<Object> matchChicken(final SurveyResult surveyResult) {
         final long limitCount = 10L;
-		final Double score = surveyResult.getA1() + surveyResult.getA2() + surveyResult.getA3() + surveyResult.getB1() + surveyResult.getB2() + surveyResult.getB3() + surveyResult.getB4() + surveyResult.getC1() + surveyResult.getC2() + surveyResult.getC3() + surveyResult.getC4() + surveyResult.getD1() + surveyResult.getD2();
 //		chickenNativeQuery
         return chickenRepository.findAll().stream()
                 .limit(limitCount)

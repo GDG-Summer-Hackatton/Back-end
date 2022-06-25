@@ -9,10 +9,12 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @Tag(name = "분석")
 @RequiredArgsConstructor
 @RestController
@@ -27,6 +29,7 @@ public class AnalysisController {
 	public List<Object> analysis(@RequestParam final Long memberId) {
 		final Survey survey = surveyService.findByMemberId(memberId);
 		final SurveyResult surveyResult = analysisService.analysis(survey);
+		log.info("### surveyResult={}", surveyResult.toString());
 		return matchingChickenService.matchChicken(surveyResult);
 	}
 }

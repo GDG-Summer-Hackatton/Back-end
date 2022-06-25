@@ -16,6 +16,6 @@ public class AnalysisService {
 
 	// TODO surveyResult 생성 로직
 	public SurveyResult analysis(final Survey survey) {
-		return new SurveyResult();
+		return new SurveyResult(survey);
 	}
 }
