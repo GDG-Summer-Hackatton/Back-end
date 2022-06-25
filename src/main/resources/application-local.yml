@@ -1,6 +1,10 @@
 spring:
+  config:
+    activate:
+      on-profile: local
+        
   datasource:
-    url: ${DATASOURCE_URL:jdbc:mysql://chick.ci1frsfm7h8y.ap-northeast-2.rds.amazonaws.com:3306/chick?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true}
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:4306/hyune?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true}
     username: ${DATASOURCE_USERNAME:root}
     password: ${DATASOURCE_PASSWORD:password1}
 
