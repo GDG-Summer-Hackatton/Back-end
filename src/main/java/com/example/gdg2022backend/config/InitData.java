@@ -1,5 +1,6 @@
 package com.example.gdg2022backend.config;
 
+import com.example.gdg2022backend.domain.member.entity.Member;
 import com.example.gdg2022backend.domain.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +14,7 @@ public class InitData {
 
 	@Bean
 	public void init() {
-//		memberRepository.save(new Member("choi8608@gmail.com", "1234", false));
-//		memberRepository.save(new Member("choi9999@gmail.com", "1234", false));
+		memberRepository.save(new Member("choi8608@gmail.com", "1234", false));
+		memberRepository.save(new Member("choi9999@gmail.com", "1234", false));
 	}
 }
