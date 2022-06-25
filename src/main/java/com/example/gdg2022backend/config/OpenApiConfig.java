@@ -19,7 +19,7 @@ public class OpenApiConfig {
 				.description("");
 
 		return new OpenAPI()
-				.addServersItem(new Server().url("http://43.200.4.212:8080/"))
+				.addServersItem(new Server().url("http://43.200.11.44:8080/swagger-ui/index.html"))
 				.addServersItem(new Server().url("http://localhost:8080/"))
 				.components(new Components())
 				.info(info);

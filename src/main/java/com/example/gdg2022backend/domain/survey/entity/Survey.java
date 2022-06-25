@@ -33,18 +33,18 @@ public class Survey {
 	private String q10;
 	private String q11;
 
-	public Survey(final Member member, final SurveyAddReqeust request) {
+	public Survey(final Member member, final String q1, final String q2, final String q3, final String q4, final String q5, final String q6, final String q7, final String q8, final String q9, final String q10, final String q11) {
 		this.member = member;
-		this.q1 =request.getQ1().getDescription();
-		this.q2 =request.getQ2().getDescription();
-		this.q3 =request.getQ3().getDescription();
-		this.q4 =request.getQ4().getDescription();
-		this.q5 =request.getQ5().getDescription();
-		this.q6 =request.getQ6().getDescription();
-		this.q7 =request.getQ7().getDescription();
-		this.q8 =request.getQ8().getDescription();
-		this.q9 =request.getQ9().getDescription();
-		this.q10 =request.getQ10().getDescription();
-		this.q11 =request.getQ11().getDescription();
+		this.q1 = q1;
+		this.q2 = q2;
+		this.q3 = q3;
+		this.q4 = q4;
+		this.q5 = q5;
+		this.q6 = q6;
+		this.q7 = q7;
+		this.q8 = q8;
+		this.q9 = q9;
+		this.q10 = q10;
+		this.q11 = q11;
 	}
 }

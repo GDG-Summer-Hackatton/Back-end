@@ -18,7 +18,7 @@ public class SurveyAddReqeust {
     private Q9 q9;
     private Q10 q10;
     private Q11 q11;
-	String Q12;
+	private String Q12;
 
 
     @Getter

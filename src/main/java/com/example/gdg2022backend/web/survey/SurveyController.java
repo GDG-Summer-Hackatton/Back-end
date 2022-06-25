@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SurveyController {
 
-	private final SurveyService surveyService;
+    private final SurveyService surveyService;
 
-	@Operation(summary = "추가", description = "이미 존재하는 survey가 있는 경우 기존 survey는 삭제된다.")
-	@PostMapping("/survey")
-	public void add(@RequestBody final SurveyAddReqeust request) {
-		surveyService.save(request.getMemberId(), request);
-	}
+    @Operation(summary = "추가", description = "이미 존재하는 survey가 있는 경우 기존 survey는 삭제된다.")
+    @PostMapping("/survey")
+    public void add(@RequestBody final SurveyAddReqeust request) {
+        surveyService.save(request.getMemberId(), request.getQ1().getDescription(), request.getQ2().getDescription(), request.getQ3().getDescription(), request.getQ4().getDescription(), request.getQ5().getDescription(), request.getQ6().getDescription(), request.getQ7().getDescription(), request.getQ8().getDescription(), request.getQ9().getDescription(), request.getQ10().getDescription(), request.getQ11().getDescription());
+    }
 
 //	@Operation(summary = "조회")
 //	@GetMapping("/survey")
