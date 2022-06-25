@@ -1,4 +1,4 @@
-package com.example.gdg2022backend.web.common.request;
+package com.example.gdg2022backend.web.survey.request;
 
 import lombok.AccessLevel;
 import lombok.Data;
@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class AuthReqeust {
+public class SurveyAddReqeust {
 
-	private String email;
-	private String password;
+	private Long memberId;
+	private String result;
 }

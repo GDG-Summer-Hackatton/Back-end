@@ -14,7 +14,10 @@ public class InitData {
 
 	@Bean
 	public void init() {
-		memberRepository.save(new Member("choi8608@gmail.com", "1234", false));
-		memberRepository.save(new Member("choi9999@gmail.com", "1234", false));
+		memberRepository.save(new Member("dragon7159@gmail.com", "1234"));
+		memberRepository.save(new Member("dkswnkk.dev@gmail.com", "1234"));
+		memberRepository.save(new Member("choi8608@gmail.com", "1234"));
+		memberRepository.save(new Member("tmdals099@gmail.com", "1234"));
+		memberRepository.save(new Member("wind.orca.pe@gmail.com", "1234"));
 	}
 }

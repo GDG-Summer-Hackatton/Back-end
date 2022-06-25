@@ -1,8 +1,9 @@
-package com.example.gdg2022backend.web.common;
+package com.example.gdg2022backend.web.member;
 
 import com.example.gdg2022backend.domain.member.entity.Member;
 import com.example.gdg2022backend.domain.member.service.MemberService;
-import com.example.gdg2022backend.web.common.request.AuthReqeust;
+import com.example.gdg2022backend.web.member.request.MemberLoginReqeust;
+import com.example.gdg2022backend.web.member.response.MemberLoginResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -10,16 +11,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Tag(name = "인증")
+@Tag(name = "회원")
 @RequiredArgsConstructor
 @RestController
-public class AuthController {
+public class MemberController {
 
 	private final MemberService memberService;
 
-	@Operation(summary = "login")
-	@PostMapping("/auth/login")
-	public Member login(@RequestBody final AuthReqeust request) {
-		return memberService.findByEmailAndPassword(request.getEmail(), request.getPassword());
+	@Operation(summary = "로그인")
+	@PostMapping("/member/login")
+	public MemberLoginResponse login(@RequestBody final MemberLoginReqeust request) {
+		final Member member = memberService.findByEmailAndPassword(request.getEmail(), request.getPassword());
+		return new MemberLoginResponse(member);
 	}
 }
