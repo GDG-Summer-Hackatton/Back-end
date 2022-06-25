@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MarkdownSettings">
+    <option name="customStylesheetPath" value="$USER_HOME$/Downloads/c093e3401790a02f02e020a2884229e8-2cceaaccfbc3a1b556c2ac06658550b95b8f6aba/intellij-markdown.css" />
+    <enabledExtensions>
+      <entry key="MermaidLanguageExtension" value="false" />
+      <entry key="PlantUMLLanguageExtension" value="true" />
+    </enabledExtensions>
+  </component>
+</project>
