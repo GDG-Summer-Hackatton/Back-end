@@ -22,12 +22,12 @@ public class SurveyController {
 	@Operation(summary = "추가", description = "이미 존재하는 survey가 있는 경우 기존 survey는 삭제된다.")
 	@PostMapping("/survey")
 	public void add(@RequestBody final SurveyAddReqeust request) {
-		surveyService.save(request.getMemberId(), request.getResult());
+		surveyService.save(request.getMemberId(), request);
 	}
 
-	@Operation(summary = "조회")
-	@GetMapping("/survey")
-	public SurveyFindReqeust add(@RequestParam final Long memberId) {
-		return new SurveyFindReqeust(surveyService.findByMemberId(memberId).getResult());
-	}
+//	@Operation(summary = "조회")
+//	@GetMapping("/survey")
+//	public SurveyFindReqeust add(@RequestParam final Long memberId) {
+//		return new SurveyFindReqeust(surveyService.findByMemberId(memberId).getResult());
+//	}
 }
