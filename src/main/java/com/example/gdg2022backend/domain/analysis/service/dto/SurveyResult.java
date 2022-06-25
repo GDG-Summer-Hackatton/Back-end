@@ -245,9 +245,15 @@ public class SurveyResult {
 	}
 
 	public Integer sum() {
-		return a1 + a2 + a3 +
+		final int sum = a1 + a2 + a3 +
 				b1 + b2 + b3 + b4 +
 				c1 + c2 + c3 + c4 +
 				d1 + d2;
+
+		if (sum > 90 || sum < 10) {
+			return 50;
+		}
+
+		return sum;
 	}
 }
